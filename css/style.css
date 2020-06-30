@@ -1,0 +1,36 @@
+body {
+  margin-top: 80px;
+  background-color: #F0E2E7;
+  height: 100%;
+}
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spacerr {
+  height: 30px;
+}
+
+.viewPhi {
+   align: center;
+   justify-content: center;
+}
+.titulo {
+   align: center;
+   justify-content: center;
+}
+.bajada {
+   align: center;
+   justify-content: center;
+   align-items: center;
+
+}
+.inputNumero {
+   align: center;
+   justify-content: center;
+   align-items: center;
+
+}

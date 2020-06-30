@@ -1,5 +1,5 @@
 body {
-  margin-top: 80px;
+  margin-top: 70px;
   background-color: #F0E2E7;
   height: 100%;
 }
@@ -11,7 +11,7 @@ body {
 }
 
 .spacerr {
-  height: 30px;
+  height: 40px;
 }
 
 .viewPhi {
@@ -34,3 +34,4 @@ body {
    align-items: center;
 
 }
+

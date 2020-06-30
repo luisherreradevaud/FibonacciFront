@@ -32,7 +32,7 @@ function escribeEnView(texto) {
 }
 
 function escribeEnBajada(texto) {
-  document.getElementById("bajada").innerHTML = "N&uacute;mero de Fibonacci";
+  document.getElementById("bajada").innerHTML = texto;
 }
 
 function pideInformacionAPI(i) {
@@ -45,7 +45,7 @@ function pideInformacionAPI(i) {
     } else {
       var n = BigInt(data["n"]);
       escribeEnView(n);
-      escribeEnBajada();
+      escribeEnBajada("N&uacute;mero de Fibonacci");
     }
   });
 }

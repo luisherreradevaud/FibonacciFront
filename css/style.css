@@ -18,15 +18,32 @@ body {
    align: center;
    justify-content: center;
 }
+.viewSuma {
+   align: center;
+   justify-content: center;
+}
+.viewMult {
+   align: center;
+   justify-content: center;
+}
 .titulo {
    align: center;
    justify-content: center;
 }
-.bajada {
+.bajadaPhi {
    align: center;
    justify-content: center;
    align-items: center;
-
+}
+.bajadaSuma {
+   align: center;
+   justify-content: center;
+   align-items: center;
+}
+.bajadaMult {
+   align: center;
+   justify-content: center;
+   align-items: center;
 }
 .inputNumero {
    align: center;
@@ -34,4 +51,3 @@ body {
    align-items: center;
 
 }
-

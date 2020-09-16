@@ -4,8 +4,8 @@ function validarInput(input) {
   } else if(input.value < 0) {
     input.value = "";
   } else if(input.value == "") {
-    escribeEnView("");
-    escribeEnBajada("");
+    escribeEnViews("");
+    escribeEnBajadas("");
   } else {
     pideInformacionAPI(input.value);
   }
@@ -27,12 +27,29 @@ function getJSON(url, callback) {
   xhr.send();
 }
 
-function escribeEnView(texto) {
-  document.getElementById("view").innerHTML = texto;
+function escribeEnViews(data) {
+  if ( data != "" ) {
+    document.getElementById("viewPhi").innerHTML = BigInt(data["respuestaPhi"]);
+    document.getElementById("viewSuma").innerHTML = BigInt(data["respuestaSuma"]);
+    document.getElementById("viewMult").innerHTML = BigInt(data["respuestaMult"]);
+  } else {
+    document.getElementById("viewPhi").innerHTML = "";
+    document.getElementById("viewSuma").innerHTML = "";
+    document.getElementById("viewMult").innerHTML = "";
+  }
+
 }
 
-function escribeEnBajada(texto) {
-  document.getElementById("bajada").innerHTML = texto;
+function escribeEnBajadas(texto) {
+  if ( texto != "" ) {
+    document.getElementById("bajadaPhi").innerHTML = "Phi";
+    document.getElementById("bajadaSuma").innerHTML = "Suma";
+    document.getElementById("bajadaMult").innerHTML = "Suma cuadrados";
+  } else {
+    document.getElementById("bajadaPhi").innerHTML = texto;
+    document.getElementById("bajadaSuma").innerHTML = texto;
+    document.getElementById("bajadaMult").innerHTML = texto;
+  }
 }
 
 function pideInformacionAPI(i) {
@@ -43,9 +60,9 @@ function pideInformacionAPI(i) {
     if (err !== null) {
       escribeEnView("Algo no ha resultado.");
     } else {
-      var n = BigInt(data["n"]);
-      escribeEnView(n);
-      escribeEnBajada("N&uacute;mero de Fibonacci");
+      console.log(data);
+      escribeEnViews(data);
+      escribeEnBajadas("Phi, suma y multiplicaci&oacute;n");
     }
   });
 }
